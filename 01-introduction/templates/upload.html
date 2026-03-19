@@ -1,0 +1,17 @@
+<html> 
+<body> 
+    
+    <form action = "/uploader" method = "POST" enctype="multipart/form-data"> 
+        <!-- 1. 添加文件选择框，name 必须与后端一致 -->
+        <label for="file">选择文件：</label>
+        <input type="file" name="file" id="file" required>
+        
+        <!-- 2. 限制文件类型 (可选) -->
+        <!-- <input type="file" name="file" accept=".jpg,.png,.pdf"> -->
+        
+        <br><br>
+        <input type="submit" value="开始上传">
+    </form> 
+        
+</body> 
+</html>
