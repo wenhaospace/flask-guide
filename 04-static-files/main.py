@@ -15,6 +15,12 @@ def serve_image():
     message = "Image Route"
     return render_template('image.html', message=message)
 
+# video
+@app.route("/video")
+def serve_video():
+    message = "Video Route"
+    return render_template('video.html', message=message)
+
 # run the application
 if __name__ == "__main__":
     app.run(debug=True)
