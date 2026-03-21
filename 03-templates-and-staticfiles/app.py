@@ -14,5 +14,10 @@ def welcome(name):
 def home():
     return render_template("home.html")
 
+@app.route("/about")
+def about():
+    sites = ['twitter', 'facebook', 'instagram', 'whatsapp']
+    return render_template("about.html", sites=sites)
+
 if __name__ == "__main__":
     app.run()
