@@ -42,6 +42,13 @@ if app.config['ENV'] == 'development':
 elif app.config['ENV'] == 'production':
     app.config.from_object('config.ProductionConfig')
 
+# DEBUG配置和默认文件上传配置
+app.config['DEBUG'] = True
+
+app.config['UPLOAD_FOLDER'] = 'uploads/'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB limit
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
