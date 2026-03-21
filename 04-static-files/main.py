@@ -21,6 +21,12 @@ def serve_video():
     message = "Video Route"
     return render_template('video.html', message=message)
 
+# audio
+@app.route("/audio")
+def serve_audio():
+    message = "Audio Route"
+    return render_template('audio.html', message=message)
+
 # run the application
 if __name__ == "__main__":
     app.run(debug=True)
