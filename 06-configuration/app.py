@@ -36,6 +36,12 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 # 举例： 从外部文件中加载配置
 app.config.from_pyfile('config.py')
 
+# 多环境隔离配置
+if app.config['ENV'] == 'development':
+    app.config.from_object('config.DevelopmentConfig')
+elif app.config['ENV'] == 'production':
+    app.config.from_object('config.ProductionConfig')
+
 @app.route('/')
 def index():
     return render_template('index.html')
