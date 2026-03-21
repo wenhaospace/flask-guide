@@ -33,6 +33,8 @@ app.config['JSON_SORT_KEYS'] = False
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 
+# 举例： 从外部文件中加载配置
+app.config.from_pyfile('config.py')
 
 @app.route('/')
 def index():
