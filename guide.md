@@ -26,3 +26,8 @@ $ source ./venv/bin/activate
 ```shell
 $ pip install flask
 ```
+
+```shell
+# 用于表单处理
+$ pip install flask-WTF
+```
