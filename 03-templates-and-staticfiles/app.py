@@ -19,5 +19,9 @@ def about():
     sites = ['twitter', 'facebook', 'instagram', 'whatsapp']
     return render_template("about.html", sites=sites)
 
+@app.route("/contact/<role>")
+def contact(role):
+    return render_template("contact.html", person=role)
+
 if __name__ == "__main__":
     app.run()
